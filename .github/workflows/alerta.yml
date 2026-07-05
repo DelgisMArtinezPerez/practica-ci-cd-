@@ -1,0 +1,21 @@
+name: Alerta ntfy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Ejecutar programa Hola Mundo
+        run: node index.js
+
+      - name: Enviar notificación a ntfy.sh
+        run: |
+          curl -d "Se hizo push a la rama main del repositorio ${{ github.repository }} por ${{ github.actor }}" \
+          ntfy.sh/devops-itla
