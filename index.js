@@ -1,1 +1,1 @@
-console.log("Hola Mundo desde ITLA - CI/CD con GitHub Actions");x
+console.log("Hola Mundo desde ITLA - CI/CD con GitHub Actions");
